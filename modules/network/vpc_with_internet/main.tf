@@ -10,7 +10,7 @@ module "vpc" {
 module "private_subnet" {
   source = "../../private/network/subnet"
 
-  vpc_id            = "{module.vpc.id}"
+  vpc_id            = module.vpc.id
   cidr_block        = cidrsubnet(var.vpc_cidr_block, var.subnet_size_bits, 0)
   subnet_name       = "Private Subnet"
   subnet_tier       = "private"
@@ -20,7 +20,7 @@ module "private_subnet" {
 module "public_subnet" {
   source = "../../private/network/subnet"
 
-  vpc_id                  = "{module.vpc.id}"
+  vpc_id                  = module.vpc.id
   cidr_block              = cidrsubnet(var.vpc_cidr_block, var.subnet_size_bits, 1)
   subnet_name             = "Public Subnet"
   subnet_tier             = "public"
