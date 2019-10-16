@@ -43,3 +43,11 @@ module "nat_gateway_route" {
   nat_gateway_id = module.gateways.nat_gateway_id
   route_table_id = module.vpc.default_route_table_id
 }
+
+module "public_subnet_route_table" {
+  source = "../../private/network/public_subnet_route_table"
+
+  inet_gateway_id = module.gateways.inet_gateway_id
+  vpc_id          = module.vpc.id
+  subnet_id       = module.public_subnet.id
+}
