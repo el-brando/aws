@@ -36,3 +36,10 @@ module "gateways" {
   subnet_id             = module.public_subnet.id
   vpc_id                = module.vpc.id
 }
+
+module "nat_gateway_route" {
+  source = "../../private/network/nat_gateway_route"
+
+  nat_gateway_id = module.gateways.nat_gateway_id
+  route_table_id = module.vpc.default_route_table_id
+}
