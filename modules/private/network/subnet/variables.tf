@@ -16,7 +16,7 @@ variable "subnet_tier" {
 
 variable "map_public_ip_on_launch" {
   description = "determines if public IP's are attached to instances launched into this subnet, default is no"
-  default = "false"
+  default     = "false"
 }
 
 variable "availability_zone" {
