@@ -3,7 +3,7 @@ data "aws_availability_zones" "available" {
 }
 
 module "vpc_with_internet" {
-  source = "../../modules/network/vpc_with_internet"
+  source = "../../../modules/network/vpc_with_internet"
 
   availability_zone     = data.aws_availability_zones.available.names[0]
   internet_gateway_name = "test_inet_gateway"
