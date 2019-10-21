@@ -1,7 +1,3 @@
-variable "ami_id" {
-  description = "AMI ID to build the instance from"
-}
-
 variable "instance_type" {
   description = "The instance type to create"
 }
