@@ -8,6 +8,7 @@ module "ubuntu_instance" {
   instance_name = var.instance_name
   instance_type = var.instance_type
   ami_id        = data.aws_ami.latest-ubuntu.id
+  vpc_sg_ids    = var.vpc_sg_ids
 }
 
 data "aws_ami" "latest-ubuntu" {

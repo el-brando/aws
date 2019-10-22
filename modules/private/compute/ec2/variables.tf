@@ -17,3 +17,7 @@ variable "key_name" {
 variable "instance_name" {
   description = "Value for the Name tag"
 }
+
+variable "vpc_sg_ids" {
+  description = "SG ID's to associate with the instance"
+}
