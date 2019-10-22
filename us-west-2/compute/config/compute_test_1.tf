@@ -1,7 +1,7 @@
 module "vpc" {
   source = "../../../modules/network/vpc_lookup"
 
-  vpc_name = "test_vpc"
+  vpc_name = "default_vpc"
 }
 
 module "subnet" {
