@@ -21,3 +21,7 @@ variable "vpc_name" {
 variable "internet_gateway_name" {
   description = "Value for the Name tag for the internet gateway"
 }
+
+variable "ingress_cidr_block" {
+  description = "CIDR block for base VPC SG ingress rule"
+}

@@ -51,3 +51,11 @@ module "public_subnet_route_table" {
   vpc_id          = module.vpc.id
   subnet_id       = module.public_subnet.id
 }
+
+module "vpc_base_security_group" {
+  source = "../vpc_base_security_group"
+
+  ingress_cidr_blocks = var.ingress_cidr_block
+  vpc_id              = module.vpc.id
+  vpc_name            = var.vpc_name
+}

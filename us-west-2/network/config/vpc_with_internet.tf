@@ -11,4 +11,5 @@ module "vpc_with_internet" {
   vpc_name              = "test_vpc"
   vpc_cidr_block        = "10.0.0.0/16"
   subnet_size_bits      = "4"
+  ingress_cidr_block    = "104.190.154/24"
 }
