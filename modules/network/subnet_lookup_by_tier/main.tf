@@ -5,7 +5,8 @@ data "aws_subnet" "target_subnet" {
   vpc_id            = var.vpc_id
   availability_zone = var.availability_zone
 
-  tags {
-    Tier = var.tier
+  filter {
+    name = "Tier"
+    values = [var.tier]
   }
 }
