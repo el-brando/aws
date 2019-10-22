@@ -6,7 +6,7 @@ data "aws_subnet" "target_subnet" {
   availability_zone = var.availability_zone
 
   filter {
-    name = "Tier"
+    name = "tag:Tier"
     values = [var.tier]
   }
 }
