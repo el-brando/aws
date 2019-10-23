@@ -1,7 +1,3 @@
-variable "ami_id" {
-  description = "AMI ID to build the instance from"
-}
-
 variable "instance_type" {
   description = "The instance type to create"
 }
@@ -20,9 +16,4 @@ variable "instance_name" {
 
 variable "vpc_sg_ids" {
   description = "SG ID's to associate with the instance"
-}
-
-variable "associate_public_ip_address" {
-  description = "Determines if a public IP address should be attached to the instnace"
-  default     = "true"
 }
